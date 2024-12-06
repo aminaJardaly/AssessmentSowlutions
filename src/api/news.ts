@@ -4,7 +4,6 @@ const BASE_URL = 'https://gnews.io/api/v4';
 // Fetch news articles based on a search query or top headlines by default
 export const fetchNews = async (query: string = '', max: number = 10) => {
     try {
-        // Determine the URL based on whether a query is provided
         const url = query
             ? `${BASE_URL}/search?q=${encodeURIComponent(query)}&lang=en&country=us&max=${max}&apikey=${API_KEY}`
             : `${BASE_URL}/top-headlines?category=general&lang=en&country=us&max=${max}&apikey=${API_KEY}`;
@@ -22,6 +21,6 @@ export const fetchNews = async (query: string = '', max: number = 10) => {
         return data.articles || [];
     } catch (error) {
         console.error("Error fetching news:", error);
-        return []; // Return an empty array to avoid breaking the app
+        return [];
     }
 };

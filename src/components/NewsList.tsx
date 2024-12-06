@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 16,
         marginBottom: 4,
-        color: "#333", // Slightly darker text color
+        color: "#333", 
     },
     description: {
-        color: "#666", // Softer grey for description
+        color: "#666", 
         fontSize: 14,
-        lineHeight: 20, // Improved readability
+        lineHeight: 20,
     },
 });
 

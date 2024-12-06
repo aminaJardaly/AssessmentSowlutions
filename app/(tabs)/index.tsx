@@ -19,13 +19,13 @@ const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            {/* Search Bar with Icon */}
+            {/* Search Bar */}
             <View style={styles.searchContainer}>
                 <Icon name="search" size={20} color="#555" style={styles.icon} />
                 <TextInput
                     style={styles.searchInput}
                     placeholder="Search articles..."
-                    placeholderTextColor="#777" // Placeholder in grey
+                    placeholderTextColor="#777"
                     value={query}
                     onChangeText={setQuery}
                 />
@@ -50,11 +50,18 @@ const styles = StyleSheet.create({
     searchContainer: {
         flexDirection: "row",
         alignItems: "center",
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#fff", 
         borderRadius: 8,
+        borderWidth: 0.5, 
+        borderColor: "#ccc", 
         paddingHorizontal: 10,
         marginBottom: 16,
         height: 40,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3, 
     },
     icon: {
         marginRight: 8,
@@ -62,7 +69,7 @@ const styles = StyleSheet.create({
     searchInput: {
         flex: 1,
         fontSize: 16,
-        color: "#555", // Input text color in grey
+        color: "#555", 
     },
 });
 
